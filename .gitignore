@@ -130,3 +130,6 @@ dmypy.json
 
 # Client Secret
 client_secret.json
+
+#Testing login
+test_login_credentials.json
