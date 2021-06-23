@@ -30,7 +30,6 @@ def get_selenium_dict():
 
     #looping through check for each invoice
     for invoice in range(1, len(total_invoices)+1):
-        time.sleep(.5)
         element = driver.find_element_by_xpath('/html/body/div[4]/form/div[1]/div[1]/table/tbody/tr['+str(invoice)+']/td[3]/a[1]').click()
         try:
             #Find number of SKUs for looping
@@ -74,7 +73,7 @@ def get_selenium_dict():
             save_invoice = driver.find_element_by_xpath('/html/body/div[4]/form/div[4]/div[2]/div/div/div/button[3]').click()
             click_to_queue = driver.find_element_by_xpath('/html/body/div[4]/div[1]/div/div/ul/li[1]/a[1]').click()
         except:
-            time.sleep(.5)
+            time.sleep(1)
             driver.back()
-            time.sleep(.5)
+            time.sleep(1)
     return selenium_dict
